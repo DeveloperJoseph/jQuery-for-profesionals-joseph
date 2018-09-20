@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>INTRO A JQUERY</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--LIBRERIA PARA ACCEDER A JQUERY ONLINE-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1 id="texto"></h1>
+            <script>
+                //Defiere una función que se ejecutará cuando el DOM (Modelo de Objeto de Documento) 
+                //esté detectado para estar "listo" por jQuery
+                $(document).ready(function () {
+                    // A commonly used shorthand version (behaves the same as the above)
+                    $("#texto").text("HELLO, WORLD");
+                });
+            </script>
+            <!--BREVE EXPLICACIÓN
+            
+            Once the DOM is ready, jQuery executes the callback function shown 
+            above, there is  only one call which does 2 main thing:
+
+            1.- Using a selector as the passed argument is the core of jQuery's
+            functionality and naming; the entire library essentially  evolved from extending.
+            2.- Set the text() inside the selected element to hello , world!
+              
+            -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Evitando colisiones con librerias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--LIBRERIA PARA ACCEDER A JQUERY ONLINE-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            //Para liberar '$' para usar con otras bibliotecas
+            //- Después de llamar a esta función, '$' ya no es un alias para jQuery.
+            // Sin embargo, aún puede usar la variable 'jQuery' para acceder a las funciones de jQuery:
+            jQuery.noConflict();
+
+            //Manera simple de asegurar '$' alias de jQuery y asegurarse de que 
+            //DOM(Modelo de Objeto de Documento)  esté listo:
+            jQuery(function ($) {// DOM is ready
+                $("#hello").text("Hello world 2!");// You're now free to use $ alias
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1 id="hello"></h1><!--SALIDA  DE DATO DE NUESTRO jQuery-->
+        </div>
+        <p id="demo"></p><br/>
+        <p id="demo2"></p><br/>
+        <textarea id="demo3"></textarea>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <br/>
+        <button type="button" onclick="cargandoPrompt()">Cick see prompt</button>
+        <br/>
+        <h3 id="squareNumber"></h3>
+        <script>
+            let x = 2;
+            let y = 5;
+            let z = 10;
+            let respuesta = (x + y) * z;
+            let respuesta2 = y % x;
+            document.getElementById("demo").innerHTML =
+                    "La respuesta es:" + respuesta;
+            document.getElementById("demo2").innerHTML =
+                    "La respuesta es del (%):" + respuesta2;
+
+            document.getElementById("demo3").innerHTML =
+                    "Hello\nPeru";
+
+
+            let cadena = `La mitad de 2500 es: ${2500 / 2}`;
+            let cadena2 = `La multiplicación de 2500 * 2 es : ${2500 * 2}`;
+            document.getElementById("demo4").innerHTML = cadena;
+            document.getElementById("demo5").innerHTML = cadena2;
+
+            let squareNumber = Number(prompt("PICK A NUMBER"));
+            let salida_squareNumber = ``;
+            if (!Number.isNaN(squareNumber)) {
+               salida_squareNumber = `Your number ${squareNumber} is the square root of ${squareNumber * squareNumber}`;
+            }else{
+                salida_squareNumber = `Hey the value not is a number valid!`;
+            }
+
+            document.getElementById("squareNumber").innerHTML = salida_squareNumber;
+
+
+
+            console.log(-(10 - 2));
+            console.log(5 > 2);
+            console.log(2 > 5);
+
+            let mood = "ligth";
+            console.log(mood);
+            mood = "Dark";
+            console.log(mood);
+
+            var name = "Joseph";
+            const greeting = "Hello, How are you " + name + "?";
+            console.log(greeting);
+
+            let sueldo = 2500;
+            let sueldo2 = 2501;
+            console.log("El numero mayor es: ", Math.max(sueldo, sueldo2));
+            console.log("El numero menor es: ", Math.min(sueldo, sueldo2));
+            console.log("El igv es: ", Math.min(sueldo, sueldo2) * 0.18);
+            console.log("Total a pagar: ", Math.min(sueldo, sueldo2) + (Math.min(sueldo, sueldo2) * 0.18));
+            function cargandoPrompt() {
+                prompt("ENTER YOUR PASSWORD");
+            }
+        </script>
+    </body>
+</html>

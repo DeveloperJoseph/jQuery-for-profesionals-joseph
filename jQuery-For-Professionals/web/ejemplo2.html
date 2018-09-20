@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TIPOS DE SELECTORES</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--LIBRERIA PARA ACCEDER A JQUERY ONLINE-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            /*SELECTORES BÁSICOS:
+             ====================*/
+            //$("*") - TODOS LOS ELEMENTOS DEL DOCUMENT HTML
+            //$("div") - TODOS LOS <div> ELEMENTOS DEL DOCUMENT HTML
+            //$(".blue") - TODOS LOS ELEMENTOS DEL DOCUMENT HTML CON CLASE '.blue'
+            //$(".blue.red") - TODOS LOS ELEMENTOS DEL DOCUMENT HTML CON CLASE '.blue' and '.red'
+            // $(".blue,.red") - TODOS LOS ELEMENTOS DEL DOCUMENT HTML CON CLASE '.blue' or '.red'
+            // $("#headline") - EL PRIMER ELEMENTO CON ID='headline'
+            // $("[href]") - TODOS LOS ELEMENTOS CON EL ATRIBUTO 'HREF' DEL DOCUMENT HTML
+            // $("[href='example.com']") - TODOS LOS ELEMENTOS CON EL ATRIBUTO 'HREF' UNA URL ESPECIFICADA
+
+            /*OPERADORES RELACIONALES:
+             ====================*/
+            //$("div span") -  Todos <span> s que son descendientes de un <div> 
+            //$("div > span") - Todos <span> s que son hijos directos de un <div>
+            //$("a ~ span") - Todos <span> s que son hermanos después de <a>
+            //$("a + span") - // Todos los <span> s que están inmediatamente después de <a>
+
+            //En jQuery puede seleccionar elementos en una página usando muchas
+            //propiedades diferentes del elemento, que incluyen: Tipo, Clase ,ID, Posesión de atributo, atribut, Valo, indexado, Selector.
+
+            //SELECCIONANDO POR TIPO:
+            //El siguiente selector jQuery seleccionará todos 
+            //los elementos <a>, incluidos 1, 2, 3 y 4.
+            $("a");
+
+            //SELECTING BY CLASS:
+            //The following jQuery selector will select all elements 
+            //of class example (including non-a elements), which are 3, 4 and 5.
+            $(".example");
+
+            //SELECTING BY ID:
+            //The following jQuery selector will select the element
+            // with the given ID, which is 2. 
+            $("#second-link");
+
+            //Seleccionando por Posesión de Atributo:
+            //El siguiente selector jQuery seleccionará todos los elementos 
+            //con un atributo href definido, incluidos 1 y 4. 
+            $("[href]");
+
+            //Seleccionar por valor de atributo:
+            //El siguiente selector jQuery seleccionará todos 
+            //los elementos donde exista el atributo href con un valor de index.html, que es solo 1.
+            $("[href = 'index.html']");
+            
+            //Selección por posición indexada (Selector indexado):
+            //El siguiente selector jQuery seleccionará solo 1, el segundo <a>
+            //es decir. el segundo enlace porque el índice suministrado es 1
+            //  como eq (1) (Tenga en cuenta que el índice comienza en 0, por lo tanto, el segundo se seleccionó aquí).
+             $("a: eq (1)");
+             
+             //Seleccionar con exclusión indexada:
+             //Para excluir un elemento usando su índice: not (: eq ()).
+             // Lo siguiente selecciona elementos <a>, excepto que con el ejemplo de clase, que es 1.
+             $("a").Not(": eq (0) ");
+             
+             //Seleccionar con Exclusion:
+            //Para excluir un elemento de una selección, use: not ().
+            // Lo siguiente selecciona los elementos <a>, excepto aquellos con 
+            // el ejemplo de clase, que son 1 y 2. 
+            $("a: not (.example)");
+            
+            //Seleccionando por Pseudo-estado:
+            //También puede seleccionar en jQuery usando pseudo estados, 
+            //que incluyen: last-child,first-of-type, lastof-type, etc.
+            //El siguiente selector jQuery solo seleccionará el primer elemento <a>: número 1.
+            $("a:first-of-type");
+            
+        </script>
+    </head>
+    <body>
+        <!--ETIQUETAS HTML-->
+        <div>
+            <a href="index.html"></a><!-- 1 -->
+            <a id="second-link"></a><!-- 2 -->
+            <a class="example"></a><!-- 3 -->
+            <a class="example" href="about.html"></a> <!-- 4 --> 
+            <span class="example"></span><!-- 5 -->
+        </div>
+    </body>
+</html>

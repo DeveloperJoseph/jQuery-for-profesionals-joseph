@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function multipleIF() {
+            let number = Number(prompt("PICKER A NUMBER"));
+            let respuesta = ``;
+            if (number <= 10) {
+            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 11, gane :p!!`;
+            } else if (number <= 100) {
+            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 101, gane :p!!`;
+            } else if (number <= 1000) {
+            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 1001, gane :p!!`;
+            } else if (number <= 10000) {
+            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 10001, gane :p!!`;
+            } else if (number <= 100000) {
+            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 100001, gane :p!!`;
+            }
+            document.getElementById("respuesta").innerHTML = respuesta.toString();
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1 id="respuesta"></h1><h1 id="respuesta2"></h1>
+        <button onclick="multipleIF()">Jugar!</button>
+        <button onclick="multipleIF2()">Jugar vs!</button>
+    </body>
+</html>
