@@ -11,22 +11,27 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function multipleIF() {
-            let number = Number(prompt("PICKER A NUMBER"));
-            let respuesta = ``;
-            if (number <= 10) {
-            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 11, gane :p!!`;
-            } else if (number <= 100) {
-            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 101, gane :p!!`;
-            } else if (number <= 1000) {
-            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 1001, gane :p!!`;
-            } else if (number <= 10000) {
-            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 10001, gane :p!!`;
-            } else if (number <= 100000) {
-            respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 100001, gane :p!!`;
-            }
-            document.getElementById("respuesta").innerHTML = respuesta.toString();
+                let number = Number(prompt("PICKER A NUMBER"));
+                let respuesta = ``;
+                if (number <= 10) {
+                    respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 11, gane :p!!`;
+                } else if (number <= 100) {
+                    respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 101, gane :p!!`;
+                } else if (number <= 1000) {
+                    respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 1001, gane :p!!`;
+                } else if (number <= 10000) {
+                    respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 10001, gane :p!!`;
+                } else if (number <= 100000) {
+                    respuesta = `EL NUMERO INGRESADO ES: ${number} yo elegi 100001, gane :p!!`;
+                }
+                document.getElementById("respuesta").innerHTML = respuesta.toString();
             }
 
+            function multipleIF2() {
+                let n = Number(prompt("PICKER A NUMBER"));
+                let respuesta = `EL NUMERO INGRESADO ES: ${n} YO ELEGI: ${n+1}, gane :p!!`;
+                document.getElementById("respuesta2").innerHTML = respuesta.toString();
+            }
         </script>
     </head>
     <body>
