@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CICLO WHILE - POTENCIA - JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            //FUNCION POTENCIA - SIN PARAMETROS
+            function potencia() {
+                let name = String(prompt("Enter your name"));//capturando entrada del usuario numero a exponer
+                let number = Number(prompt("Enter your number"));//capturando entrada del usuario numero a exponer
+                let potencia = Number(prompt("Enter yours potencia"));//capturando entrada del usuario la potencia
+                let result = 1;//variable para realizar un seguimiento de nuestro resultado
+                let counter = 0;//otro para contar la frecuencia con la que hemos multiplicado este resultado por el valor obtenido.
+
+                //El ciclo while comprueba si el segundo enlace ha llegado
+                //a 10 todavía y, de no ser así, actualiza ambos enlaces.
+                while (counter < potencia) {
+                    result = result * number;// 1 = 1  x 2 = 2
+                    counter = counter + 1;//1
+                }
+                console.log(result);//salida de nuestro resultado de la potencia 
+                document.getElementById("salida").innerHTML =
+                       "Hello "+name+", Presiona F12 para ver la respuesta, thanks.";//mensaje de ayuda al usuario
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="salida"></h1>
+        <button onclick="potencia()">Play!!</button>
+    </body>
+</html>
